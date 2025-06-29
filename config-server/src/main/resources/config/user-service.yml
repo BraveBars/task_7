@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-service
+  cloud:
+    discovery:
+      client:
+        service-url:
+          defaultZone: http://localhost:8761/eureka
+datasource:
+  url: jdbc:postgresql://localhost:5432/test_db
+  username: bestuser
+  password: bestuser
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
